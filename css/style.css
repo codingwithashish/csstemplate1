@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+}
+
+/* Typography */
+h1,
+.h1 {
+    font-size: 2rem;
+}
+
+h2,
+.h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #26b6a4;
+    font-weight: 200;
+}
+
+h3,
+.h3 {
+    font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.25rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.125rem;
+}
+
+h5,
+.h6 {
+    font-size: 1rem;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #26b6a4;
+}
+
+/* Global CSS */
+.text-center{
+    text-align: center  !important;
+}
+.bg-light-pink{
+    background-color: #fce4d8;
+}
+.cmn-btn {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #26b6a4;
+    color: #ffffff;
+    transition: all .5s ease;
+    border-radius: 2.5rem;
+    letter-spacing: .1875rem;
+    font-weight: 900;
+}
+
+.float-left{
+    float: left;
+}
+.cmn-btn:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.overlay {
+    position: relative;
+}
+
+.overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.mt-5 {
+    margin-top: 3.125rem;
+}
+.mt-3{
+    margin-top: 1rem;
+}
+
+.pb-5 {
+    padding-bottom: 3.125rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.clr-both {
+    clear: both;
+}
+
+.bg-color {
+    background: #26b6a4;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-green {
+    color: #26b6a4;
+}
+
+.bg-green {
+    background-color: #26b6a4;
+}
+
+.text-gray {
+    color: #a5928d;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.overflow-auto{
+    overflow: auto;
+}
+.o-fit-cover,
+.o-fit-contain{
+    width: 100%;
+    height: 100%;
+}
+.o-fit-cover {
+    object-fit: cover;  
+}
+
+.o-fit-contain {
+    object-fit: contain;   
+}
+
+.img-res {
+    max-width: 100%;
+    height: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-space-evn {
+    justify-content: space-evenly;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+/* Typography */
+.main {
+    margin-top: 121px;
+    min-height: calc(100vh - 368px);
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    background-color: #ffffff !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.main-header nav {
+    position: relative;
+    background-color: #ffffff;
+}
+
+.main-header .collapse {
+    width: 100%;
+    position: relative;
+    margin-left: 110px;
+}
+
+.main-header .nav-items {
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.nav-items li {
+    list-style-type: none;
+}
+
+.nav-items li a{
+    color: #506171;
+    position: relative;
+    padding-bottom: 3px;
+    display: inline-block;
+    margin: 0 20px;
+}
+.nav-items a::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    transition: all .35s ease;
+    background: #26b6a4;
+    left: 0;
+    width: 0;
+    bottom: 0;
+}
+
+.nav-items a:hover::before {
+    width: 100%;
+}
+
+.nav-items a:hover {
+    color: #26b6a4;
+}
+/* dropdown */
+
+.dropdown-menu{
+    min-width: 12.5rem;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    text-transform: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    transition: all 1s ease;
+    display: none; 
+    padding-bottom: 10px;
+}
+
+.dropdown-item{
+    padding-top:10px ;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;   
+}
+.dropdown i{
+    transform: rotate(0deg);
+    transition: all 300ms ease;
+}
+.dropdown:hover i{
+    transform: rotate(-180deg);
+}
+/*End  navigation menu */
+
+
+/* Start main section */
+
+/* Start hero section */
+.hero-banner {
+    width: 100%;
+    height: 40vh;
+    min-height: 300px;
+    position: relative;
+}
+
+.hero-banner h1 {
+    color: #d9dfe6;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* End hero section */
+
+/* Start classroom teacher section  */
+
+.sec-heading {
+    position: relative;
+}
+
+.staff-sec h2 span {
+    position: relative;
+    padding: 0 10px;
+    background-color: #fff;
+}
+
+.staff-sec h2::before {
+    content: '';
+    position: absolute;
+    background: #b0bbc4;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+    left: 0;
+    top: 50%;
+}
+
+
+.staff-sec .card-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.staff-sec .img-avatar:hover {
+    transform: scale(1.1);
+}
+
+.staff-sec .card {
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
+    margin: 1rem 0;
+}
+
+.img-avatar {
+    width: 15rem;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: all .5s ease;
+}
+.card a{
+    font-size: 12px;
+}
+
+/* End classroom teacher section  */
+
+
+/* footer content */
+.footer {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.footer img {
+    width: 3.1rem;
+}
+
+.footer h3 {
+    color: #675854;
+    margin: 8px 0;
+    letter-spacing: .1rem;
+}
+
+
+
+.footer span {
+    position: relative;
+    margin: 0 20px;
+}
+
+.footer .dot::after {
+    content: '';
+    width: .375rem;
+    height: .375rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #b3bbb7;
+    top: 12px;
+    left: -4px;
+}
+.list-unstyled{
+    list-style-type: none;
+}
+.icons li{
+    display: inline-block;
+}
+.icons li:not(:nth-child(1)){
+    margin-left: 5px;
+}
+.icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    
+}
+
+.icons a:hover i{
+    transform: rotate(360deg);
+}
+.icons i{
+    font-size: 1.25rem;
+    transition: all 200ms ease;
+    transform: rotate(0deg);
+}
